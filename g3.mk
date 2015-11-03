@@ -16,6 +16,7 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
+$(call inherit-product-if-exists, vendor/cm/config/common_full.mk)
 $(call inherit-product-if-exists, vendor/lge/g3-common/g3-common-vendor.mk)
 
 # Overlay
