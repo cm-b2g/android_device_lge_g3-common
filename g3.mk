@@ -54,6 +54,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mass_storage
 
+# for Gecko to support virtual home button
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.moz.has_home_button=0
+
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 560dpi
