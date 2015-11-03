@@ -116,6 +116,8 @@ TARGET_RELEASE_CPPFLAGS += -DNEEDS_LGE_RIL_SYMBOLS
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
+include vendor/cm/sepolicy/sepolicy.mk
+
 BOARD_SEPOLICY_DIRS += device/lge/g3-common/sepolicy
 
 BOARD_SEPOLICY_UNION += \
