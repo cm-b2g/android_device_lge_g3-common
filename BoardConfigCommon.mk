@@ -139,16 +139,16 @@ BOARD_SEPOLICY_UNION += \
     radio.te \
     rmt_storage.te \
     sensors.te \
+    service.te \
+    service_contexts \
     servicemanager.te \
     sysinit.te \
     system_app.te \
     tee.te \
     thermanager.te \
+    timekeep.te \
     vibe_data_file.te \
     ueventd.te \
     vold.te \
     wcnss_service.te \
     wpa.te
-
-# Time services
-BOARD_USES_QC_TIME_SERVICES := true

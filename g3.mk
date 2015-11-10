@@ -69,6 +69,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libandroid
 
+#OSS Time solution
+PRODUCT_PACKAGES += \
+    timekeep \
+    TimeKeep \
+
+PRODUCT_COPY_FILES += \
+    hardware/sony/timekeep/gecko/TimeKeepService.js:system/b2g/distribution/bundles/timekeep/TimeKeepService.js \
+    hardware/sony/timekeep/gecko/chrome.manifest:system/b2g/distribution/bundles/timekeep/chrome.manifest
+
 EXPORT_DEVICE_PREFS := device/lge/g3-common/prefs
 
 # Screen density
