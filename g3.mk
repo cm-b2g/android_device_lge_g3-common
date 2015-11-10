@@ -69,6 +69,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libandroid
 
+EXPORT_DEVICE_PREFS := device/lge/g3-common/prefs
+
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 560dpi
