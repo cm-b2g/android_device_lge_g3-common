@@ -267,13 +267,13 @@ on boot
     chmod 664 /sys/devices/virtual/input/lge_touch/lpwg_data
     chown system radio /sys/devices/virtual/input/lge_touch/lpwg_notify
     chmod 664 /sys/devices/virtual/input/lge_touch/lpwg_notify
-    write /sys/devices/virtual/input/lge_touch/lpwg_notify "1 1 0 0"
     chown system system /sys/devices/virtual/input/lge_touch/lpwg_test_info
     chmod 644 /sys/devices/virtual/input/lge_touch/lpwg_test_info
     chown system system /sys/devices/virtual/input/lge_touch/lpwg_test_ctrl
     chmod 644 /sys/devices/virtual/input/lge_touch/lpwg_test_ctrl
     chown system system /sys/devices/virtual/input/lge_touch/touch_wake_up_test
     chmod 664 /sys/devices/virtual/input/lge_touch/touch_wake_up_test
+    setprop display.dttw.enabled 1
 
     chown bluetooth net_bt_stack /dev/btlock
     chmod 0600 /dev/btlock
@@ -1032,6 +1032,12 @@ service xtwifi_inet /system/bin/xtwifi-inet-agent
 
 on ffbm
     start fastmmisrv
+
+on property:display.dttw.enabled=0
+    write /sys/devices/virtual/input/lge_touch/lpwg_notify "1 0 0 0"
+
+on property:display.dttw.enabled=1
+    write /sys/devices/virtual/input/lge_touch/lpwg_notify "1 1 0 0"
 
 on property:bluetooth.aptx_streaming=1
     start bt-aptx-tuning
