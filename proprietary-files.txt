@@ -162,8 +162,6 @@ vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
 # GPS
--app/com.qualcomm.location/com.qualcomm.location.apk:app/com.qualcomm.location.apk
--app/com.qualcomm.services.location/com.qualcomm.services.location.apk:app/com.qualcomm.services.location.apk
 etc/izat.conf
 etc/permissions/com.qualcomm.location.xml
 etc/quipc.conf
@@ -221,13 +219,7 @@ vendor/lib/libmm-abl-oem.so
 bin/irsc_util
 
 # Radio
--app/qcrilmsgtunnel/qcrilmsgtunnel.apk:app/qcrilmsgtunnel.apk
--app/shutdownlistener/shutdownlistener.apk:app/shutdownlistener.apk
 bin/radish
-etc/permissions/qcnvitems.xml
-etc/permissions/qcrilhook.xml
--framework/qcnvitems.jar
--framework/qcrilhook.jar
 
 # Thermal
 bin/thermal-engine
@@ -235,7 +227,6 @@ vendor/lib/libthermalclient.so
 vendor/lib/libthermalioctl.so
 
 # Time services
--app/TimeService/TimeService.apk:app/TimeService.apk
 bin/time_daemon
 -vendor/lib/libtime_genoff.so
 vendor/lib/libTimeService.so
